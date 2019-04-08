@@ -10,7 +10,7 @@ const onCalculate = () => {
       result = first - second;
       break;
     case "/":
-      result = first / second;
+      result = (first / second).toFixed(2);
       break;
     case "x":
       result = first * second;
