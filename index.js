@@ -1,3 +1,5 @@
+let lists = [];
+
 const onCalculate = () => {
   const operator = document.getElementById("operator").value;
   const first = parseInt(document.getElementById("first").value);
@@ -29,4 +31,23 @@ const calculateShape = () => {
   const result = sisi ** 2;
 
   document.getElementById("luas-result").innerHTML = result;
+};
+
+const onAddList = () => {
+  const newListItem = document.getElementById("list-item").value;
+
+  if (newListItem.length <= 0) {
+    alert("New List Item Cannot Be Empty");
+    return; // Kill The Function
+  }
+
+  lists.push(newListItem);
+
+  let currentListHtml = "";
+
+  for (let i = 0; i < lists.length; i++) {
+    currentListHtml += `<li>${lists[i]}</li>`;
+  }
+
+  document.getElementById("list").innerHTML = currentListHtml;
 };
