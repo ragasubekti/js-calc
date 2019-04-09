@@ -16,7 +16,7 @@ const onCalculate = () => {
       result = first * second;
       break;
     default:
-      result = first + second;
+      result = "(╯°□°)╯︵ ┻━┻";
   }
 
   document.getElementById("result").innerHTML = result;
