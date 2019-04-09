@@ -16,8 +16,10 @@ const onCalculate = () => {
       result = first * second;
       break;
     default:
-      result = "(╯°□°)╯︵ ┻━┻";
+      result = first + second;
   }
+
+  result = isNaN(result) ? "(╯°□°)╯︵ ┻━┻" : result;
 
   document.getElementById("result").innerHTML = result;
 };
